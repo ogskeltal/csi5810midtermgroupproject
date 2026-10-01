@@ -1,0 +1,11 @@
+kind,age,job,education,contact,month,poutcome,campaign,previous,euribor3m,nr.employed,y,p_hat
+TP,92,retired,unknown,cellular,aug,success,1,4,0.903,4991.6,1,0.9225585176967431
+TP,37,unemployed,university.degree,cellular,jul,success,1,2,0.881,4991.6,1,0.9138491295938105
+TP,58,admin.,high.school,cellular,may,success,1,1,0.682,5008.7,1,0.8862591433331669
+TP,52,admin.,unknown,telephone,apr,success,1,1,0.654,5008.7,1,0.8769696969696972
+TP,37,technician,university.degree,cellular,may,success,1,4,0.677,5008.7,1,0.8769696969696972
+TN,52,management,basic.4y,telephone,may,nonexistent,35,0,4.858,5191.0,0,0.0
+TN,38,blue-collar,basic.4y,telephone,jun,nonexistent,41,0,4.962,5228.1,0,0.0
+TN,53,blue-collar,basic.4y,telephone,jun,nonexistent,18,0,4.959,5228.1,0,0.0
+TN,31,services,high.school,cellular,jul,nonexistent,35,0,4.968,5228.1,0,0.0
+TN,51,services,high.school,telephone,jun,nonexistent,28,0,4.959,5228.1,0,0.0

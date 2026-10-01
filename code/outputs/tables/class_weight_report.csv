@@ -1,0 +1,5 @@
+model,class weight,AP,Brier,ECE,call rate,recall,"net value / 1,000"
+LR,none,0.449,0.079,0.008,0.22,0.65,"2,535"
+LR,balanced,0.444,0.162,0.275,1.00,1.00,639
+GB,none,0.481,0.076,0.005,0.21,0.66,"2,652"
+GB,balanced,0.476,0.155,0.266,0.99,1.00,667

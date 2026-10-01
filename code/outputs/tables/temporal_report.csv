@@ -1,0 +1,4 @@
+policy (temporal test set),call rate,precision,recall,"net value / 1,000"
+call everyone,1.00,0.31,1.00,"10,414"
+"GB, raw, t* = 0.10",0.29,0.53,0.50,"6,263"
+"GB, calibrated, t* = 0.10",0.28,0.54,0.48,"6,059"

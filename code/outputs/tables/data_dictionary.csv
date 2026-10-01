@@ -1,0 +1,22 @@
+variable,group,type,levels / range,unknown,description
+age,client,numeric,17 - 98,0,client age in years
+job,client,categorical,12 levels,330,type of job (12 levels)
+marital,client,categorical,4 levels,80,marital status
+education,client,categorical,8 levels,1731,highest education level (8 levels)
+default,client,categorical,3 levels,8597,has credit in default?
+housing,client,categorical,3 levels,990,has a housing loan?
+loan,client,categorical,3 levels,990,has a personal loan?
+contact,last contact,categorical,2 levels,0,contact communication type (cellular / telephone)
+month,last contact,categorical,10 levels,0,month of last contact
+day_of_week,last contact,categorical,5 levels,0,weekday of last contact
+duration,last contact,numeric,0 - 4918,0,last-call duration in seconds (LEAKAGE: known only after the call; dropped)
+campaign,campaign history,numeric,1 - 56,0,number of contacts in this campaign for this client (incl. last)
+pdays,campaign history,numeric,0 - 999,0,days since last contact in a previous campaign (999 = never contacted)
+previous,campaign history,numeric,0 - 7,0,number of contacts before this campaign
+poutcome,campaign history,categorical,3 levels,0,outcome of the previous campaign (failure / nonexistent / success)
+emp.var.rate,macro-economic,numeric,-3.4 - 1.4,0,"employment variation rate, quarterly (%)"
+cons.price.idx,macro-economic,numeric,92.201 - 94.767,0,"consumer price index, monthly"
+cons.conf.idx,macro-economic,numeric,-50.8 - -26.9,0,"consumer confidence index, monthly"
+euribor3m,macro-economic,numeric,0.634 - 5.045,0,"3-month Euribor rate, daily (%)"
+nr.employed,macro-economic,numeric,4963.6 - 5228.1,0,"number of employees, quarterly (thousands)"
+y,target,categorical,2 levels,0,TARGET: subscribed a term deposit? (yes / no)

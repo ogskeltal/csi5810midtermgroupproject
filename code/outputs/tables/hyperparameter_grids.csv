@@ -1,0 +1,12 @@
+model,hyperparameter,candidates,selected
+Logistic regression,C,"[0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0]",3.0
+k-NN,n_neighbors,"[25, 51, 101, 201]",201
+k-NN,weights,"['uniform', 'distance']",uniform
+Random forest,max_depth,"[8, 12, 16, None]",8
+Random forest,min_samples_leaf,"[1, 5, 20]",5
+Random forest,max_features,"['sqrt', 0.3, 0.5]",0.5
+Gradient boosting,learning_rate,"[0.03, 0.06, 0.1]",0.03
+Gradient boosting,max_leaf_nodes,"[15, 31, 63]",15
+Gradient boosting,min_samples_leaf,"[20, 50, 100]",100
+Gradient boosting,l2_regularization,"[0.0, 1.0, 5.0]",0.0
+Gradient boosting,max_iter,"[150, 300, 500]",150

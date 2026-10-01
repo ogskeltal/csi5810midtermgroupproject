@@ -1,0 +1,20 @@
+variable,type,statistic,value
+nr.employed,numeric,point-biserial r,-0.3546782959214432
+pdays,numeric,point-biserial r,-0.32491447761663195
+poutcome,categorical,Cramer's V,0.32048796034156973
+euribor3m,numeric,point-biserial r,-0.3077714039407232
+emp.var.rate,numeric,point-biserial r,-0.2983344261593832
+month,categorical,Cramer's V,0.2743948709306683
+previous,numeric,point-biserial r,0.2301810032165931
+job,categorical,Cramer's V,0.15276755102517953
+contact,categorical,Cramer's V,0.1447730557120007
+cons.price.idx,numeric,point-biserial r,-0.13621121281924836
+default,categorical,Cramer's V,0.09935422186499668
+education,categorical,Cramer's V,0.06847190717366518
+campaign,numeric,point-biserial r,-0.06635741475467141
+cons.conf.idx,numeric,point-biserial r,0.05487794605319757
+marital,categorical,Cramer's V,0.05457045126504373
+age,numeric,point-biserial r,0.030398803040003752
+day_of_week,categorical,Cramer's V,0.025194657858251365
+housing,categorical,Cramer's V,0.01174791039026865
+loan,categorical,Cramer's V,0.0051538144342840216

@@ -1,0 +1,11 @@
+kind,age,job,education,contact,month,poutcome,campaign,previous,euribor3m,nr.employed,y,p_hat
+FN,39,blue-collar,basic.9y,telephone,may,nonexistent,23,0,4.86,5191.0,1,0.0
+FN,44,blue-collar,basic.4y,telephone,may,nonexistent,1,0,4.856,5191.0,1,0.01683784789207954
+FN,45,blue-collar,basic.9y,telephone,may,nonexistent,1,0,4.857,5191.0,1,0.019185146852860845
+FN,47,blue-collar,unknown,telephone,may,nonexistent,1,0,4.856,5191.0,1,0.020952365484722592
+FN,45,blue-collar,basic.6y,telephone,may,nonexistent,6,0,4.857,5191.0,1,0.02241330764333917
+FP,39,admin.,university.degree,cellular,mar,success,1,1,0.65,5008.7,0,0.9393939393939394
+FP,33,self-employed,university.degree,cellular,mar,success,1,1,0.644,5008.7,0,0.8624769433465087
+FP,50,admin.,high.school,cellular,may,success,2,5,0.682,5008.7,0,0.8582345191040843
+FP,32,technician,university.degree,cellular,jul,success,1,2,0.885,4991.6,0,0.8314591924868923
+FP,32,admin.,university.degree,cellular,jul,success,2,1,0.846,4991.6,0,0.8284472850615312

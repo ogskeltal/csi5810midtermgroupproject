@@ -1,0 +1,25 @@
+\begin{tabular}{lrrrrrrrr}
+\toprule
+strategy & threshold & call rate & precision & recall & spend per 1000 & subscriptions per 1000 & net value per 1000 & misclassification cost per 1000 \\
+\midrule
+Call nobody & -- & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 5070.42 \\
+Call everyone (current practice) & -- & 1.00 & 0.11 & 1.00 & 5000.00 & 112.68 & 633.80 & 4436.62 \\
+Oracle (perfect information) & -- & 0.11 & 1.00 & 1.00 & 563.38 & 112.68 & 5070.42 & 0.00 \\
+Logistic regression, raw, t = 0.5 & 0.50 & 0.04 & 0.66 & 0.22 & 190.63 & 25.13 & 1066.05 & 4004.37 \\
+Logistic regression, raw, t* = 0.10 & 0.10 & 0.22 & 0.33 & 0.65 & 1119.48 & 73.09 & 2535.21 & 2535.21 \\
+Logistic regression, raw, OOF-tuned t = 0.13 & 0.13 & 0.18 & 0.38 & 0.61 & 916.71 & 68.84 & 2525.50 & 2544.92 \\
+Logistic regression, calibrated, t* = 0.10 & 0.10 & 0.21 & 0.35 & 0.63 & 1029.63 & 71.27 & 2534.00 & 2536.43 \\
+k-NN, raw, t = 0.5 & 0.50 & 0.04 & 0.64 & 0.22 & 193.05 & 24.89 & 1051.48 & 4018.94 \\
+k-NN, raw, t* = 0.10 & 0.10 & 0.22 & 0.33 & 0.64 & 1090.34 & 72.12 & 2515.78 & 2554.64 \\
+k-NN, raw, OOF-tuned t = 0.11 & 0.11 & 0.20 & 0.35 & 0.62 & 999.88 & 69.82 & 2490.89 & 2579.53 \\
+k-NN, calibrated, t* = 0.10 & 0.10 & 0.20 & 0.36 & 0.62 & 978.63 & 69.94 & 2518.21 & 2552.21 \\
+Random forest, raw, t = 0.5 & 0.50 & 0.04 & 0.67 & 0.26 & 217.34 & 29.02 & 1233.61 & 3836.81 \\
+Random forest, raw, t* = 0.10 & 0.10 & 0.20 & 0.36 & 0.65 & 1009.59 & 73.58 & 2669.38 & 2401.04 \\
+Random forest, raw, OOF-tuned t = 0.09 & 0.09 & 0.23 & 0.34 & 0.68 & 1133.44 & 76.49 & 2691.23 & 2379.19 \\
+Random forest, calibrated, t* = 0.10 & 0.10 & 0.22 & 0.34 & 0.67 & 1095.80 & 75.28 & 2668.16 & 2402.26 \\
+Gradient boosting, raw, t = 0.5 & 0.50 & 0.04 & 0.66 & 0.26 & 219.16 & 29.02 & 1231.79 & 3838.64 \\
+Gradient boosting, raw, t* = 0.10 & 0.10 & 0.21 & 0.35 & 0.66 & 1044.80 & 73.94 & 2652.38 & 2418.04 \\
+Gradient boosting, raw, OOF-tuned t = 0.09 & 0.09 & 0.23 & 0.33 & 0.67 & 1147.40 & 76.01 & 2652.99 & 2417.44 \\
+Gradient boosting, calibrated, t* = 0.10 & 0.10 & 0.21 & 0.35 & 0.65 & 1038.13 & 73.70 & 2646.92 & 2423.51 \\
+\bottomrule
+\end{tabular}

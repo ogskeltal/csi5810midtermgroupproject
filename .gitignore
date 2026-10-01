@@ -1,0 +1,24 @@
+# Course document not to be published
+CSI_5810_Midterm_Project_Menu_and_Group_Assignments.pdf
+
+# LaTeX build artifacts (main.pdf and main.bbl are kept on purpose)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.blg
+paper/*.toc
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+__MACOSX/
+.vscode/
+.idea/

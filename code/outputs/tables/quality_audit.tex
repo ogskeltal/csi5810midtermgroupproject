@@ -1,0 +1,17 @@
+\begin{tabular}{p{0.42\linewidth}p{0.52\linewidth}}
+\toprule
+check & finding \\
+\midrule
+Rows / columns & 41,188 / 21 \\
+Exact duplicate rows & 12 (dropped) \\
+Positive class (y = yes) & 4,640 (11.3\%) \\
+Rows with any 'unknown' value & 10,700 (26.0\%) \\
+'unknown' by column & default 8,597, education 1,731, housing 990, loan 990, job 330, marital 80 \\
+pdays = 999 (never contacted before) & 96.3\% of rows \\
+duration = 0 s & 4 rows, all y = no \\
+ROC-AUC of duration alone & 0.818 (leakage; feature dropped) \\
+campaign > 10 contacts & 869 rows (max 56) \\
+age > 80 & 119 rows \\
+default = yes & 3 rows (level kept, effectively 'no' vs 'unknown') \\
+\bottomrule
+\end{tabular}

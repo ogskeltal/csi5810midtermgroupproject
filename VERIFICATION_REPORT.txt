@@ -1,0 +1,106 @@
+[PASS] Title block names the group number
+[PASS] Member name present: Andrew Aurand
+[PASS] Member name present: Christina Carvalho
+[PASS] Member name present: Cameron Clark
+[PASS] Member name present: Tyler Donovan
+[PASS] Abstract present
+[PASS] Index terms present
+[PASS] Section present: INTRODUCTION
+[PASS] Section present: DATASET AND PROBLEM DEFINITION
+[PASS] Section present: DATA PREPARATION AND EXPLORATORY ANALYSIS
+[PASS] Section present: METHODS AND EXPERIMENTAL DESIGN
+[PASS] Section present: RESULTS AND DISCUSSION
+[PASS] Section present: ERROR ANALYSIS, LIMITATIONS, AND RESPONSIBLE
+[PASS] Section present: CONCLUSION
+[PASS] Section present: REFERENCES
+[PASS] Section present: CONTRIBUTION STATEMENT
+[PASS] Section present: GENERATIVE-AI DISCLOSURE
+[PASS] Section present: APPENDIX
+[PASS] Sections are numbered (IEEE roman numerals)
+[PASS] IEEE conference template, two columns
+[PASS] IEEE-style numbered reference list
+[PASS] All in-text citations resolve to bib entries  -- 15 keys; missing=[]
+[PASS] All bib entries are cited  -- uncited=[]
+[PASS] Every figure and table is referenced/discussed in the text  -- labels=22; unreferenced=[]
+[PASS] Every float has a caption (21 floats)
+[PASS] No unfilled placeholders left in main.tex  -- []
+[PASS] Main technical content (Sections I-VII) within 4-6 pages  -- Conclusion starts p6; contribution statement p7; 0 line(s) of conclusion on p7; appendix p8; 12 pages total
+[PASS] One focused, evaluable research question
+[PASS] Unit of analysis stated
+[PASS] Intended user / decision stated
+[PASS] Task type stated
+[PASS] Assumptions and success criteria stated
+[PASS] Dataset name, source and public URL
+[PASS] Access date
+[PASS] Dataset size and attributes
+[PASS] License stated
+[PASS] Privacy / permitted use
+[PASS] Collection context and sampling limitations
+[PASS] Data-quality issue discussed: duplicates
+[PASS] Data-quality issue discussed: missing values (unknown)
+[PASS] Data-quality issue discussed: inconsistent/sentinel values
+[PASS] Data-quality issue discussed: outliers
+[PASS] Data-quality issue discussed: imbalance
+[PASS] Data-quality issue discussed: leakage
+[PASS] Data dictionary table
+[PASS] Target distribution figure
+[PASS] Distributions of categorical and numeric variables
+[PASS] Correlation / association analysis
+[PASS] Written interpretation of EDA patterns
+[PASS] Preparation decision explained: encoding of categoricals
+[PASS] Preparation decision explained: scaling
+[PASS] Preparation decision explained: feature construction
+[PASS] Preparation decision explained: train/test split
+[PASS] Preparation decision explained: cross-validation
+[PASS] Preparation decision explained: leakage prevention (transformers fit on train folds)
+[PASS] Preparation decision explained: duplicates handled
+[PASS] Preparation decision explained: outliers handled
+[PASS] Simple baseline present
+[PASS] At least two comparison methods (4 found)
+[PASS] Assumptions stated per method
+[PASS] Hyperparameters and selection documented
+[PASS] Interpretability/complexity/computation/performance trade-off discussed
+[PASS] At least three suitable metrics reported (10)
+[PASS] Confusion matrix reported
+[PASS] Metrics explained and justified
+[PASS] Uncertainty: fold variation and bootstrap CIs
+[PASS] Paired comparison between models
+[PASS] Consequences of FP and FN discussed
+[PASS] Class imbalance consequences discussed
+[PASS] Calibration assessed (project-specific requirement)
+[PASS] Expected campaign cost / value evaluated (project-specific requirement)
+[PASS] Sensitivity to cost assumptions
+[PASS] Concrete examples of incorrect predictions
+[PASS] Concrete examples of correct predictions
+[PASS] Most important variables
+[PASS] Patterns in errors
+[PASS] Subgroup analysis
+[PASS] Effect of changing modelling choices (3 experiments)
+[PASS] Limitation discussed: sampling/generalisation
+[PASS] Limitation discussed: privacy
+[PASS] Limitation discussed: fairness
+[PASS] Limitation discussed: reproducibility
+[PASS] Limitation discussed: computation
+[PASS] Limitation discussed: data quality
+[PASS] Two or more realistic improvements
+[PASS] Responsible-use statement
+[PASS] Notebook: setup instructions and packages
+[PASS] Notebook: documented data path / download instructions
+[PASS] Notebook: random seeds set  -- random_state=SEED used 7 times
+[PASS] Notebook: stages separated into sections (11/11 found)
+[PASS] Notebook fully executed without errors  -- 23/23 code cells executed; error cells=[]
+[PASS] Notebook generates the report's figures and tables  -- 11 figures, 28 tables
+[PASS] Every paper figure/table file is produced by the notebook  -- missing figures=[]; missing tables=[]
+[PASS] Paper tables are byte-identical to the notebook outputs
+[PASS] README explains manual steps / reproduction limits
+[PASS] Notebook documents important decisions (comments + markdown)  -- 83 comment markers, 21 markdown cells
+[PASS] Notebook contains the generative-AI disclosure
+[PASS] Project log with roles, meetings, task ownership (TEMPLATE: group must fill)  -- [EDIT] markers present
+[PASS] Contribution statement present (TEMPLATE: group must confirm roles and remove the red note)
+[PASS] Generative-AI disclosure in the report
+[FAIL] Version control / shared workspace with history  -- no .git directory in the project folder
+[PASS] Headline test metrics in the text match results.json  -- AP=0.4808, AUC=0.8105
+[PASS] Final-rule numbers in the text match results.json  -- call rate=20.8%, recall=65.4%, net=2,647
+[PASS] Call-everyone value in the text matches results.json  -- 634
+
+103 passed, 1 failed

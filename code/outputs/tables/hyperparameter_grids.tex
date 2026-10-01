@@ -1,0 +1,17 @@
+\begin{tabular}{llll}
+\toprule
+model & hyperparameter & candidates & selected \\
+\midrule
+Logistic regression & C & [0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0] & 3.0 \\
+k-NN & n\_neighbors & [25, 51, 101, 201] & 201 \\
+k-NN & weights & ['uniform', 'distance'] & uniform \\
+Random forest & max\_depth & [8, 12, 16, None] & 8 \\
+Random forest & min\_samples\_leaf & [1, 5, 20] & 5 \\
+Random forest & max\_features & ['sqrt', 0.3, 0.5] & 0.5 \\
+Gradient boosting & learning\_rate & [0.03, 0.06, 0.1] & 0.03 \\
+Gradient boosting & max\_leaf\_nodes & [15, 31, 63] & 15 \\
+Gradient boosting & min\_samples\_leaf & [20, 50, 100] & 100 \\
+Gradient boosting & l2\_regularization & [0.0, 1.0, 5.0] & 0.0 \\
+Gradient boosting & max\_iter & [150, 300, 500] & 150 \\
+\bottomrule
+\end{tabular}

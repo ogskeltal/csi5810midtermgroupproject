@@ -1,0 +1,5 @@
+model,Brier raw,Brier cal.,ECE raw,ECE cal.,AP cal.
+Logistic regression,0.0786,0.0784,0.008,0.003,0.448
+k-NN,0.0792,0.0789,0.008,0.002,0.434
+Random forest,0.0766,0.0764,0.009,0.004,0.480
+Gradient boosting,0.0763,0.0764,0.005,0.005,0.477

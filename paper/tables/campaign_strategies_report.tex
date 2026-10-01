@@ -1,0 +1,13 @@
+\begin{tabular}{lrrrrr}
+\toprule
+strategy & call rate & precision & recall & spend / 1,000 & net value / 1,000 \\
+\midrule
+Call nobody & 0.00 & 0.00 & 0.00 & 0 & 0 \\
+Call everyone & 1.00 & 0.11 & 1.00 & 5,000 & 634 \\
+Oracle (perfect information) & 0.11 & 1.00 & 1.00 & 563 & 5,070 \\
+Logistic regression (calibrated) & 0.21 & 0.35 & 0.63 & 1,030 & 2,534 \\
+k-NN (calibrated) & 0.20 & 0.36 & 0.62 & 979 & 2,518 \\
+Random forest (calibrated) & 0.22 & 0.34 & 0.67 & 1,096 & 2,668 \\
+Gradient boosting (calibrated) & 0.21 & 0.35 & 0.65 & 1,038 & 2,647 \\
+\bottomrule
+\end{tabular}

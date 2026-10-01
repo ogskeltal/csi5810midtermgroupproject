@@ -1,0 +1,1718 @@
+{
+  "seed": 5810,
+  "fast_mode": false,
+  "cost_contact": 5.0,
+  "value_sub": 50.0,
+  "versions": {
+    "python": "3.12.10",
+    "pandas": "3.0.1",
+    "numpy": "1.26.4",
+    "sklearn": "1.8.0"
+  },
+  "audit": {
+    "rows": 41188,
+    "duplicate_rows": 12,
+    "positive_rate": 0.11265417111780131,
+    "n_positive": 4640,
+    "pdays_999_share": 0.9632174419733903,
+    "duration_zero_rows": 4,
+    "duration_zero_all_no": true,
+    "duration_alone_auc": 0.8184458681875134,
+    "campaign_gt_10": 869,
+    "campaign_max": 56,
+    "age_gt_80": 119,
+    "default_yes": 3,
+    "unknown_counts": {
+      "job": 330,
+      "marital": 80,
+      "education": 1731,
+      "default": 8597,
+      "housing": 990,
+      "loan": 990
+    },
+    "rows_with_any_unknown": 10700
+  },
+  "eda": {
+    "rate_by_time_decile": [
+      0.0277,
+      0.0352,
+      0.0422,
+      0.0663,
+      0.0624,
+      0.0546,
+      0.1017,
+      0.1197,
+      0.1573,
+      0.4594
+    ],
+    "first_decile_rate": 0.027676620538965767,
+    "last_decile_rate": 0.45944633317144246,
+    "rate_by_poutcome": {
+      "failure": 0.1423,
+      "nonexistent": 0.0883,
+      "success": 0.6511
+    },
+    "rate_by_contact": {
+      "cellular": 0.1474,
+      "telephone": 0.0523
+    },
+    "rate_by_month": {
+      "mar": 0.5055,
+      "apr": 0.2048,
+      "may": 0.0643,
+      "jun": 0.1051,
+      "jul": 0.0905,
+      "aug": 0.106,
+      "sep": 0.4491,
+      "oct": 0.4387,
+      "nov": 0.1014,
+      "dec": 0.489
+    },
+    "n_by_month": {
+      "mar": 546,
+      "apr": 2632,
+      "may": 13769,
+      "jun": 5318,
+      "jul": 7174,
+      "aug": 6178,
+      "sep": 570,
+      "oct": 718,
+      "nov": 4101,
+      "dec": 182
+    },
+    "rate_by_job": {
+      "blue-collar": 0.0689,
+      "services": 0.0814,
+      "entrepreneur": 0.0852,
+      "housemaid": 0.1,
+      "self-employed": 0.1049,
+      "technician": 0.1083,
+      "unknown": 0.1121,
+      "management": 0.1122,
+      "admin.": 0.1297,
+      "unemployed": 0.142,
+      "retired": 0.2523,
+      "student": 0.3143
+    },
+    "rate_by_default": {
+      "no": 0.1288,
+      "unknown": 0.0515,
+      "yes": 0.0
+    },
+    "association": {
+      "nr.employed": -0.3547,
+      "pdays": -0.3249,
+      "poutcome": 0.3205,
+      "euribor3m": -0.3078,
+      "emp.var.rate": -0.2983,
+      "month": 0.2744,
+      "previous": 0.2302,
+      "job": 0.1528,
+      "contact": 0.1448,
+      "cons.price.idx": -0.1362,
+      "default": 0.0994,
+      "education": 0.0685,
+      "campaign": -0.0664,
+      "cons.conf.idx": 0.0549,
+      "marital": 0.0546,
+      "age": 0.0304,
+      "day_of_week": 0.0252,
+      "housing": 0.0117,
+      "loan": 0.0052
+    },
+    "corr_euribor_nr_employed": 0.9451544313982757,
+    "corr_euribor_empvar": 0.9722446711516167
+  },
+  "split": {
+    "n_total": 41176,
+    "n_train": 32940,
+    "n_test": 8236,
+    "train_pos_rate": 0.11265938069216758,
+    "test_pos_rate": 0.11267605633802817,
+    "n_test_pos": 928
+  },
+  "cv": {
+    "Majority baseline": {
+      "AP mean": 0.1127,
+      "AP sd": 0.0001,
+      "ROC-AUC mean": 0.5,
+      "ROC-AUC sd": 0.0,
+      "Brier mean": 0.1,
+      "Brier sd": 0.0,
+      "fit s": 0.0
+    },
+    "Logistic regression": {
+      "AP mean": 0.4531,
+      "AP sd": 0.0122,
+      "ROC-AUC mean": 0.7897,
+      "ROC-AUC sd": 0.0096,
+      "Brier mean": 0.0784,
+      "Brier sd": 0.0014,
+      "fit s": 7.1784
+    },
+    "k-NN": {
+      "AP mean": 0.4334,
+      "AP sd": 0.016,
+      "ROC-AUC mean": 0.7826,
+      "ROC-AUC sd": 0.0121,
+      "Brier mean": 0.0793,
+      "Brier sd": 0.0015,
+      "fit s": 10.4957
+    },
+    "Random forest": {
+      "AP mean": 0.4693,
+      "AP sd": 0.0161,
+      "ROC-AUC mean": 0.8006,
+      "ROC-AUC sd": 0.0128,
+      "Brier mean": 0.0765,
+      "Brier sd": 0.0017,
+      "fit s": 176.3932
+    },
+    "Gradient boosting": {
+      "AP mean": 0.4717,
+      "AP sd": 0.0161,
+      "ROC-AUC mean": 0.8019,
+      "ROC-AUC sd": 0.0118,
+      "Brier mean": 0.0765,
+      "Brier sd": 0.0017,
+      "fit s": 52.3176
+    }
+  },
+  "best_model": "Gradient boosting",
+  "best_params": {
+    "Logistic regression": {
+      "C": 3.0
+    },
+    "k-NN": {
+      "n_neighbors": 201,
+      "weights": "uniform"
+    },
+    "Random forest": {
+      "min_samples_leaf": 5,
+      "max_features": 0.5,
+      "max_depth": 8
+    },
+    "Gradient boosting": {
+      "min_samples_leaf": 100,
+      "max_leaf_nodes": 15,
+      "max_iter": 150,
+      "learning_rate": 0.03,
+      "l2_regularization": 0.0
+    }
+  },
+  "test": {
+    "Majority baseline": {
+      "AP": {
+        "value": 0.11267605633802817,
+        "ci_low": 0.11267605633802817,
+        "ci_high": 0.11267605633802817
+      },
+      "ROC-AUC": {
+        "value": 0.5,
+        "ci_low": 0.5,
+        "ci_high": 0.5
+      },
+      "Brier": {
+        "value": 0.09998016294421483,
+        "ci_low": 0.09998016294421483,
+        "ci_high": 0.09998016294421483
+      },
+      "log loss": {
+        "value": 0.35207396158554427,
+        "ci_low": 0.35207396158554427,
+        "ci_high": 0.35207396158554427
+      },
+      "ECE": {
+        "value": 1.6675645860553256e-05,
+        "ci_low": 1.6675645860553256e-05,
+        "ci_high": 1.6675645860553256e-05
+      }
+    },
+    "Logistic regression": {
+      "AP": {
+        "value": 0.44943399329643924,
+        "ci_low": 0.41610247230342046,
+        "ci_high": 0.48612501552210247
+      },
+      "ROC-AUC": {
+        "value": 0.7963440956297303,
+        "ci_low": 0.7780106295829622,
+        "ci_high": 0.8140894073855784
+      },
+      "Brier": {
+        "value": 0.07856201299475603,
+        "ci_low": 0.07399831810712414,
+        "ci_high": 0.08306587423029019
+      },
+      "log loss": {
+        "value": 0.27692302524490364,
+        "ci_low": 0.2628193624800077,
+        "ci_high": 0.29063302391281304
+      },
+      "ECE": {
+        "value": 0.00834718383137733,
+        "ci_low": 0.007346327746791175,
+        "ci_high": 0.015909906349268345
+      }
+    },
+    "k-NN": {
+      "AP": {
+        "value": 0.4344894999183426,
+        "ci_low": 0.3995203025798939,
+        "ci_high": 0.4706271752351139
+      },
+      "ROC-AUC": {
+        "value": 0.7913456615801294,
+        "ci_low": 0.7733479679106768,
+        "ci_high": 0.8070311660209682
+      },
+      "Brier": {
+        "value": 0.07917940519050284,
+        "ci_low": 0.07455682580455364,
+        "ci_high": 0.08381964822806778
+      },
+      "log loss": {
+        "value": 0.28259471464441044,
+        "ci_low": 0.2665344239636521,
+        "ci_high": 0.3005442999863523
+      },
+      "ECE": {
+        "value": 0.00834825387390392,
+        "ci_low": 0.006819245805938733,
+        "ci_high": 0.015697435600047358
+      }
+    },
+    "Random forest": {
+      "AP": {
+        "value": 0.47946642202472933,
+        "ci_low": 0.44352431258301334,
+        "ci_high": 0.5144368173862446
+      },
+      "ROC-AUC": {
+        "value": 0.8062904610912934,
+        "ci_low": 0.7887085035037968,
+        "ci_high": 0.8227245241096806
+      },
+      "Brier": {
+        "value": 0.07656888900567545,
+        "ci_low": 0.07219614417470693,
+        "ci_high": 0.08111930590204976
+      },
+      "log loss": {
+        "value": 0.27022478590396287,
+        "ci_low": 0.2565164804681144,
+        "ci_high": 0.28413410008701223
+      },
+      "ECE": {
+        "value": 0.008818051373341343,
+        "ci_low": 0.006162336078807352,
+        "ci_high": 0.015755605165442672
+      }
+    },
+    "Gradient boosting": {
+      "AP": {
+        "value": 0.480804202095077,
+        "ci_low": 0.44516123732871193,
+        "ci_high": 0.5149691052798613
+      },
+      "ROC-AUC": {
+        "value": 0.8104959668667309,
+        "ci_low": 0.7938670655346284,
+        "ci_high": 0.8266888661411782
+      },
+      "Brier": {
+        "value": 0.07628828686748818,
+        "ci_low": 0.07202435319783822,
+        "ci_high": 0.08077945422816021
+      },
+      "log loss": {
+        "value": 0.2693658781783845,
+        "ci_low": 0.2562064238697934,
+        "ci_high": 0.28298157132676177
+      },
+      "ECE": {
+        "value": 0.004864469489117928,
+        "ci_low": 0.003930690034268962,
+        "ci_high": 0.01287448968279865
+      }
+    }
+  },
+  "ap_paired_diff_vs_best": {
+    "Logistic regression": {
+      "mean_diff": 0.031153157593549897,
+      "ci_low": 0.017971278689243975,
+      "ci_high": 0.044622782464951105
+    },
+    "k-NN": {
+      "mean_diff": 0.046307121414407335,
+      "ci_low": 0.032294168073631294,
+      "ci_high": 0.060662012665841696
+    },
+    "Random forest": {
+      "mean_diff": 0.001209089762796696,
+      "ci_low": -0.008004223263959963,
+      "ci_high": 0.009926010982671577
+    }
+  },
+  "calibration": {
+    "Logistic regression": {
+      "Brier raw": 0.0786,
+      "Brier calibrated": 0.0784,
+      "ECE raw": 0.0083,
+      "ECE calibrated": 0.003,
+      "AP raw": 0.4494,
+      "AP calibrated": 0.448,
+      "mean p raw": 0.1123,
+      "mean p calibrated": 0.1125
+    },
+    "k-NN": {
+      "Brier raw": 0.0792,
+      "Brier calibrated": 0.0789,
+      "ECE raw": 0.0083,
+      "ECE calibrated": 0.0024,
+      "AP raw": 0.4345,
+      "AP calibrated": 0.4341,
+      "mean p raw": 0.11,
+      "mean p calibrated": 0.1121
+    },
+    "Random forest": {
+      "Brier raw": 0.0766,
+      "Brier calibrated": 0.0764,
+      "ECE raw": 0.0088,
+      "ECE calibrated": 0.0036,
+      "AP raw": 0.4795,
+      "AP calibrated": 0.4796,
+      "mean p raw": 0.1127,
+      "mean p calibrated": 0.1124
+    },
+    "Gradient boosting": {
+      "Brier raw": 0.0763,
+      "Brier calibrated": 0.0764,
+      "ECE raw": 0.0049,
+      "ECE calibrated": 0.0048,
+      "AP raw": 0.4808,
+      "AP calibrated": 0.4771,
+      "mean p raw": 0.1126,
+      "mean p calibrated": 0.1124
+    }
+  },
+  "share_test_clients_p_above_0.7": {
+    "Logistic regression": 0.01481301602719767,
+    "k-NN": 0.013963088878096164,
+    "Random forest": 0.017848470131131618,
+    "Gradient boosting": 0.01481301602719767
+  },
+  "cost": {
+    "t_star": 0.1,
+    "t_tuned": {
+      "Logistic regression": 0.13,
+      "k-NN": 0.11,
+      "Random forest": 0.09,
+      "Gradient boosting": 0.09
+    },
+    "strategies": {
+      "Call nobody": {
+        "calls": 0.0,
+        "call rate": 0.0,
+        "TP": 0.0,
+        "FP": 0.0,
+        "FN": 928.0,
+        "TN": 7308.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "spend per 1000": 0.0,
+        "subscriptions per 1000": 0.0,
+        "net value per 1000": 0.0,
+        "misclassification cost per 1000": 5070.422535211268
+      },
+      "Call everyone (current practice)": {
+        "calls": 8236.0,
+        "call rate": 1.0,
+        "TP": 928.0,
+        "FP": 7308.0,
+        "FN": 0.0,
+        "TN": 0.0,
+        "precision": 0.11267605633802817,
+        "recall": 1.0,
+        "spend per 1000": 5000.0,
+        "subscriptions per 1000": 112.67605633802818,
+        "net value per 1000": 633.8028169014085,
+        "misclassification cost per 1000": 4436.619718309859
+      },
+      "Oracle (perfect information)": {
+        "calls": 928.0,
+        "call rate": 0.11267605633802817,
+        "TP": 928.0,
+        "FP": 0.0,
+        "FN": 0.0,
+        "TN": 7308.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "spend per 1000": 563.3802816901408,
+        "subscriptions per 1000": 112.67605633802818,
+        "net value per 1000": 5070.422535211268,
+        "misclassification cost per 1000": 0.0
+      },
+      "Logistic regression, raw, t = 0.5": {
+        "threshold": 0.5,
+        "calls": 314.0,
+        "call rate": 0.0381253035454104,
+        "TP": 207.0,
+        "FP": 107.0,
+        "FN": 721.0,
+        "TN": 7201.0,
+        "precision": 0.6592356687898089,
+        "recall": 0.22306034482758622,
+        "spend per 1000": 190.62651772705198,
+        "subscriptions per 1000": 25.133559980573093,
+        "net value per 1000": 1066.0514813016027,
+        "misclassification cost per 1000": 4004.371053909665
+      },
+      "Logistic regression, raw, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1844.0,
+        "call rate": 0.22389509470616803,
+        "TP": 602.0,
+        "FP": 1242.0,
+        "FN": 326.0,
+        "TN": 6066.0,
+        "precision": 0.3264642082429501,
+        "recall": 0.6487068965517241,
+        "spend per 1000": 1119.4754735308402,
+        "subscriptions per 1000": 73.09373482272947,
+        "net value per 1000": 2535.211267605634,
+        "misclassification cost per 1000": 2535.211267605634
+      },
+      "Logistic regression, raw, OOF-tuned t = 0.13": {
+        "threshold": 0.13,
+        "calls": 1510.0,
+        "call rate": 0.18334142787761049,
+        "TP": 567.0,
+        "FP": 943.0,
+        "FN": 361.0,
+        "TN": 6365.0,
+        "precision": 0.3754966887417219,
+        "recall": 0.6109913793103449,
+        "spend per 1000": 916.7071393880525,
+        "subscriptions per 1000": 68.84409907722195,
+        "net value per 1000": 2525.4978144730453,
+        "misclassification cost per 1000": 2544.9247207382223
+      },
+      "Logistic regression, calibrated, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1696.0,
+        "call rate": 0.20592520641087908,
+        "TP": 587.0,
+        "FP": 1109.0,
+        "FN": 341.0,
+        "TN": 6199.0,
+        "precision": 0.34610849056603776,
+        "recall": 0.6325431034482759,
+        "spend per 1000": 1029.6260320543954,
+        "subscriptions per 1000": 71.2724623603691,
+        "net value per 1000": 2533.9970859640603,
+        "misclassification cost per 1000": 2536.4254492472073
+      },
+      "k-NN, raw, t = 0.5": {
+        "threshold": 0.5,
+        "calls": 318.0,
+        "call rate": 0.03861097620203983,
+        "TP": 205.0,
+        "FP": 113.0,
+        "FN": 723.0,
+        "TN": 7195.0,
+        "precision": 0.6446540880503144,
+        "recall": 0.2209051724137931,
+        "spend per 1000": 193.05488101019913,
+        "subscriptions per 1000": 24.890723652258377,
+        "net value per 1000": 1051.4813016027197,
+        "misclassification cost per 1000": 4018.941233608548
+      },
+      "k-NN, raw, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1796.0,
+        "call rate": 0.21806702282661486,
+        "TP": 594.0,
+        "FP": 1202.0,
+        "FN": 334.0,
+        "TN": 6106.0,
+        "precision": 0.3307349665924276,
+        "recall": 0.6400862068965517,
+        "spend per 1000": 1090.3351141330743,
+        "subscriptions per 1000": 72.12238950947062,
+        "net value per 1000": 2515.7843613404566,
+        "misclassification cost per 1000": 2554.638173870811
+      },
+      "k-NN, raw, OOF-tuned t = 0.11": {
+        "threshold": 0.11,
+        "calls": 1647.0,
+        "call rate": 0.19997571636716852,
+        "TP": 575.0,
+        "FP": 1072.0,
+        "FN": 353.0,
+        "TN": 6236.0,
+        "precision": 0.3491196114146934,
+        "recall": 0.6196120689655172,
+        "spend per 1000": 999.8785818358426,
+        "subscriptions per 1000": 69.81544439048082,
+        "net value per 1000": 2490.893637688198,
+        "misclassification cost per 1000": 2579.5288975230696
+      },
+      "k-NN, calibrated, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1612.0,
+        "call rate": 0.195726080621661,
+        "TP": 576.0,
+        "FP": 1036.0,
+        "FN": 352.0,
+        "TN": 6272.0,
+        "precision": 0.3573200992555831,
+        "recall": 0.6206896551724138,
+        "spend per 1000": 978.630403108305,
+        "subscriptions per 1000": 69.93686255463817,
+        "net value per 1000": 2518.2127246236037,
+        "misclassification cost per 1000": 2552.209810587664
+      },
+      "Random forest, raw, t = 0.5": {
+        "threshold": 0.5,
+        "calls": 358.0,
+        "call rate": 0.04346770276833414,
+        "TP": 239.0,
+        "FP": 119.0,
+        "FN": 689.0,
+        "TN": 7189.0,
+        "precision": 0.6675977653631285,
+        "recall": 0.25754310344827586,
+        "spend per 1000": 217.3385138416707,
+        "subscriptions per 1000": 29.018941233608547,
+        "net value per 1000": 1233.6085478387567,
+        "misclassification cost per 1000": 3836.813987372511
+      },
+      "Random forest, raw, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1663.0,
+        "call rate": 0.20191840699368627,
+        "TP": 606.0,
+        "FP": 1057.0,
+        "FN": 322.0,
+        "TN": 6251.0,
+        "precision": 0.3644016837041491,
+        "recall": 0.6530172413793104,
+        "spend per 1000": 1009.5920349684312,
+        "subscriptions per 1000": 73.5794074793589,
+        "net value per 1000": 2669.378338999514,
+        "misclassification cost per 1000": 2401.0441962117534
+      },
+      "Random forest, raw, OOF-tuned t = 0.09": {
+        "threshold": 0.09,
+        "calls": 1867.0,
+        "call rate": 0.22668771248178726,
+        "TP": 630.0,
+        "FP": 1237.0,
+        "FN": 298.0,
+        "TN": 6071.0,
+        "precision": 0.337439742903053,
+        "recall": 0.6788793103448276,
+        "spend per 1000": 1133.4385624089364,
+        "subscriptions per 1000": 76.4934434191355,
+        "net value per 1000": 2691.2336085478387,
+        "misclassification cost per 1000": 2379.188926663429
+      },
+      "Random forest, calibrated, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1805.0,
+        "call rate": 0.21915978630403107,
+        "TP": 620.0,
+        "FP": 1185.0,
+        "FN": 308.0,
+        "TN": 6123.0,
+        "precision": 0.34349030470914127,
+        "recall": 0.6681034482758621,
+        "spend per 1000": 1095.7989315201555,
+        "subscriptions per 1000": 75.27926177756193,
+        "net value per 1000": 2668.164157357941,
+        "misclassification cost per 1000": 2402.2583778533267
+      },
+      "Gradient boosting, raw, t = 0.5": {
+        "threshold": 0.5,
+        "calls": 361.0,
+        "call rate": 0.043831957260806215,
+        "TP": 239.0,
+        "FP": 122.0,
+        "FN": 689.0,
+        "TN": 7186.0,
+        "precision": 0.6620498614958449,
+        "recall": 0.25754310344827586,
+        "spend per 1000": 219.1597863040311,
+        "subscriptions per 1000": 29.018941233608547,
+        "net value per 1000": 1231.7872753763963,
+        "misclassification cost per 1000": 3838.6352598348712
+      },
+      "Gradient boosting, raw, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1721.0,
+        "call rate": 0.20896066051481302,
+        "TP": 609.0,
+        "FP": 1112.0,
+        "FN": 319.0,
+        "TN": 6196.0,
+        "precision": 0.3538640325392214,
+        "recall": 0.65625,
+        "spend per 1000": 1044.8033025740651,
+        "subscriptions per 1000": 73.94366197183099,
+        "net value per 1000": 2652.3797960174843,
+        "misclassification cost per 1000": 2418.0427391937833
+      },
+      "Gradient boosting, raw, OOF-tuned t = 0.09": {
+        "threshold": 0.09,
+        "calls": 1890.0,
+        "call rate": 0.2294803302574065,
+        "TP": 626.0,
+        "FP": 1264.0,
+        "FN": 302.0,
+        "TN": 6044.0,
+        "precision": 0.33121693121693124,
+        "recall": 0.6745689655172413,
+        "spend per 1000": 1147.4016512870326,
+        "subscriptions per 1000": 76.00777076250607,
+        "net value per 1000": 2652.986886838271,
+        "misclassification cost per 1000": 2417.4356483729966
+      },
+      "Gradient boosting, calibrated, t* = 0.10": {
+        "threshold": 0.1,
+        "calls": 1710.0,
+        "call rate": 0.20762506070908207,
+        "TP": 607.0,
+        "FP": 1103.0,
+        "FN": 321.0,
+        "TN": 6205.0,
+        "precision": 0.3549707602339181,
+        "recall": 0.6540948275862069,
+        "spend per 1000": 1038.1253035454104,
+        "subscriptions per 1000": 73.70082564351627,
+        "net value per 1000": 2646.915978630403,
+        "misclassification cost per 1000": 2423.5065565808645
+      }
+    },
+    "capture": {
+      "Logistic regression": {
+        "at_20pct": 0.6228448275862069,
+        "at_40pct": 0.7737068965517241,
+        "lift_at_10pct": 4.2780172413793105
+      },
+      "k-NN": {
+        "at_20pct": 0.6196120689655172,
+        "at_40pct": 0.7618534482758621,
+        "lift_at_10pct": 4.148706896551724
+      },
+      "Random forest": {
+        "at_20pct": 0.6508620689655172,
+        "at_40pct": 0.7790948275862069,
+        "lift_at_10pct": 4.49353448275862
+      },
+      "Gradient boosting": {
+        "at_20pct": 0.6443965517241379,
+        "at_40pct": 0.7823275862068966,
+        "lift_at_10pct": 4.568965517241379
+      }
+    },
+    "ratio_sensitivity": [
+      {
+        "cost ratio c/v": 0.05,
+        "call everyone": 3133.8028,
+        "Logistic regression": 3446.151,
+        "Logistic regression call rate": 0.6055,
+        "k-NN": 3380.8888,
+        "k-NN call rate": 0.6122,
+        "Random forest": 3416.1,
+        "Random forest call rate": 0.518,
+        "Gradient boosting": 3470.7382,
+        "Gradient boosting call rate": 0.5058
+      },
+      {
+        "cost ratio c/v": 0.1,
+        "call everyone": 633.8028,
+        "Logistic regression": 2533.9971,
+        "Logistic regression call rate": 0.2059,
+        "k-NN": 2518.2127,
+        "k-NN call rate": 0.1957,
+        "Random forest": 2668.1642,
+        "Random forest call rate": 0.2192,
+        "Gradient boosting": 2646.916,
+        "Gradient boosting call rate": 0.2076
+      },
+      {
+        "cost ratio c/v": 0.2,
+        "call everyone": -4366.1972,
+        "Logistic regression": 1702.2827,
+        "Logistic regression call rate": 0.1491,
+        "k-NN": 1694.9976,
+        "k-NN call rate": 0.1523,
+        "Random forest": 1809.1306,
+        "Random forest call rate": 0.1481,
+        "Gradient boosting": 1786.0612,
+        "Gradient boosting call rate": 0.1486
+      },
+      {
+        "cost ratio c/v": 0.3,
+        "call everyone": -9366.1972,
+        "Logistic regression": 1002.914,
+        "Logistic regression call rate": 0.1185,
+        "k-NN": 948.2759,
+        "k-NN call rate": 0.1355,
+        "Random forest": 1083.6571,
+        "Random forest call rate": 0.1281,
+        "Gradient boosting": 1068.4798,
+        "Gradient boosting call rate": 0.1141
+      }
+    ]
+  },
+  "operating_points": [
+    {
+      "model": "Logistic regression",
+      "policy": "raw, t = 0.5",
+      "accuracy": 0.8995,
+      "balanced accuracy": 0.6042,
+      "precision": 0.6592,
+      "recall": 0.2231,
+      "specificity": 0.9854,
+      "F1": 0.3333,
+      "TP": 207,
+      "FP": 107,
+      "FN": 721,
+      "TN": 7201,
+      "net value per 1000": 1066.0515
+    },
+    {
+      "model": "Logistic regression",
+      "policy": "raw, OOF-tuned t = 0.13",
+      "accuracy": 0.8417,
+      "balanced accuracy": 0.741,
+      "precision": 0.3755,
+      "recall": 0.611,
+      "specificity": 0.871,
+      "F1": 0.4651,
+      "TP": 567,
+      "FP": 943,
+      "FN": 361,
+      "TN": 6365,
+      "net value per 1000": 2525.4978
+    },
+    {
+      "model": "Logistic regression",
+      "policy": "calibrated, t* = 0.10",
+      "accuracy": 0.8239,
+      "balanced accuracy": 0.7404,
+      "precision": 0.3461,
+      "recall": 0.6325,
+      "specificity": 0.8482,
+      "F1": 0.4474,
+      "TP": 587,
+      "FP": 1109,
+      "FN": 341,
+      "TN": 6199,
+      "net value per 1000": 2533.9971
+    },
+    {
+      "model": "k-NN",
+      "policy": "raw, t = 0.5",
+      "accuracy": 0.8985,
+      "balanced accuracy": 0.6027,
+      "precision": 0.6447,
+      "recall": 0.2209,
+      "specificity": 0.9845,
+      "F1": 0.3291,
+      "TP": 205,
+      "FP": 113,
+      "FN": 723,
+      "TN": 7195,
+      "net value per 1000": 1051.4813
+    },
+    {
+      "model": "k-NN",
+      "policy": "raw, OOF-tuned t = 0.11",
+      "accuracy": 0.827,
+      "balanced accuracy": 0.7365,
+      "precision": 0.3491,
+      "recall": 0.6196,
+      "specificity": 0.8533,
+      "F1": 0.4466,
+      "TP": 575,
+      "FP": 1072,
+      "FN": 353,
+      "TN": 6236,
+      "net value per 1000": 2490.8936
+    },
+    {
+      "model": "k-NN",
+      "policy": "calibrated, t* = 0.10",
+      "accuracy": 0.8315,
+      "balanced accuracy": 0.7395,
+      "precision": 0.3573,
+      "recall": 0.6207,
+      "specificity": 0.8582,
+      "F1": 0.4535,
+      "TP": 576,
+      "FP": 1036,
+      "FN": 352,
+      "TN": 6272,
+      "net value per 1000": 2518.2127
+    },
+    {
+      "model": "Random forest",
+      "policy": "raw, t = 0.5",
+      "accuracy": 0.9019,
+      "balanced accuracy": 0.6206,
+      "precision": 0.6676,
+      "recall": 0.2575,
+      "specificity": 0.9837,
+      "F1": 0.3717,
+      "TP": 239,
+      "FP": 119,
+      "FN": 689,
+      "TN": 7189,
+      "net value per 1000": 1233.6085
+    },
+    {
+      "model": "Random forest",
+      "policy": "raw, OOF-tuned t = 0.09",
+      "accuracy": 0.8136,
+      "balanced accuracy": 0.7548,
+      "precision": 0.3374,
+      "recall": 0.6789,
+      "specificity": 0.8307,
+      "F1": 0.4508,
+      "TP": 630,
+      "FP": 1237,
+      "FN": 298,
+      "TN": 6071,
+      "net value per 1000": 2691.2336
+    },
+    {
+      "model": "Random forest",
+      "policy": "calibrated, t* = 0.10",
+      "accuracy": 0.8187,
+      "balanced accuracy": 0.753,
+      "precision": 0.3435,
+      "recall": 0.6681,
+      "specificity": 0.8378,
+      "F1": 0.4537,
+      "TP": 620,
+      "FP": 1185,
+      "FN": 308,
+      "TN": 6123,
+      "net value per 1000": 2668.1642
+    },
+    {
+      "model": "Gradient boosting",
+      "policy": "raw, t = 0.5",
+      "accuracy": 0.9015,
+      "balanced accuracy": 0.6204,
+      "precision": 0.662,
+      "recall": 0.2575,
+      "specificity": 0.9833,
+      "F1": 0.3708,
+      "TP": 239,
+      "FP": 122,
+      "FN": 689,
+      "TN": 7186,
+      "net value per 1000": 1231.7873
+    },
+    {
+      "model": "Gradient boosting",
+      "policy": "raw, OOF-tuned t = 0.09",
+      "accuracy": 0.8099,
+      "balanced accuracy": 0.7508,
+      "precision": 0.3312,
+      "recall": 0.6746,
+      "specificity": 0.827,
+      "F1": 0.4443,
+      "TP": 626,
+      "FP": 1264,
+      "FN": 302,
+      "TN": 6044,
+      "net value per 1000": 2652.9869
+    },
+    {
+      "model": "Gradient boosting",
+      "policy": "calibrated, t* = 0.10",
+      "accuracy": 0.8271,
+      "balanced accuracy": 0.7516,
+      "precision": 0.355,
+      "recall": 0.6541,
+      "specificity": 0.8491,
+      "F1": 0.4602,
+      "TP": 607,
+      "FP": 1103,
+      "FN": 321,
+      "TN": 6205,
+      "net value per 1000": 2646.916
+    }
+  ],
+  "lr_top_coefficients": {
+    "emp.var.rate": -2.1885,
+    "month_jun": -0.7488,
+    "poutcome_failure": -0.6459,
+    "contact_telephone": -0.6439,
+    "month_nov": -0.6365,
+    "month_may": -0.5831,
+    "default_unknown": -0.3764,
+    "day_of_week_mon": -0.3339,
+    "marital_divorced": -0.3129,
+    "marital_married": -0.265,
+    "marital_unknown": 0.1706,
+    "job_retired": 0.1966,
+    "poutcome_success": 0.2001,
+    "prev_contacted": 0.2061,
+    "education_illiterate": 0.3124,
+    "month_aug": 0.3218,
+    "euribor3m": 0.3424,
+    "nr.employed": 0.3836,
+    "cons.price.idx": 1.1342,
+    "month_mar": 1.2652
+  },
+  "permutation_importance": {
+    "nr.employed": 0.167,
+    "month": 0.05166,
+    "emp.var.rate": 0.02543,
+    "contact": 0.0228,
+    "prev_contacted": 0.0184,
+    "poutcome": 0.01725,
+    "day_of_week": 0.01459,
+    "euribor3m": 0.00989,
+    "campaign": 0.00854,
+    "age": 0.00538,
+    "cons.conf.idx": 0.00217,
+    "default": 0.00177,
+    "cons.price.idx": 0.00173,
+    "job": 0.00142,
+    "education": 0.00094,
+    "pdays": 0.00047,
+    "previous": 0.0001,
+    "loan": -1e-05,
+    "marital": -0.00034,
+    "housing": -0.00079
+  },
+  "prediction_examples": {
+    "TP": [
+      0.9226,
+      0.9138,
+      0.8863,
+      0.877,
+      0.877
+    ],
+    "TN": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "FN": [
+      0.0,
+      0.0168,
+      0.0192,
+      0.021,
+      0.0224
+    ],
+    "FP": [
+      0.9394,
+      0.8625,
+      0.8582,
+      0.8315,
+      0.8284
+    ]
+  },
+  "subgroups": [
+    {
+      "variable": "age band",
+      "level": "18-29",
+      "n": 1127,
+      "prevalence": 0.1633,
+      "call rate": 0.3638,
+      "recall": 0.7337,
+      "precision": 0.3293,
+      "AP": 0.4353,
+      "mean p_hat": 0.162
+    },
+    {
+      "variable": "age band",
+      "level": "30-44",
+      "n": 4470,
+      "prevalence": 0.0913,
+      "call rate": 0.1651,
+      "recall": 0.5784,
+      "precision": 0.3198,
+      "AP": 0.4131,
+      "mean p_hat": 0.0953
+    },
+    {
+      "variable": "age band",
+      "level": "45-59",
+      "n": 2401,
+      "prevalence": 0.095,
+      "call rate": 0.1504,
+      "recall": 0.5658,
+      "precision": 0.3573,
+      "AP": 0.4775,
+      "mean p_hat": 0.0918
+    },
+    {
+      "variable": "age band",
+      "level": "60+",
+      "n": 237,
+      "prevalence": 0.4557,
+      "call rate": 0.8439,
+      "recall": 0.9907,
+      "precision": 0.535,
+      "AP": 0.7537,
+      "mean p_hat": 0.4084
+    },
+    {
+      "variable": "contact",
+      "level": "cellular",
+      "n": 5237,
+      "prevalence": 0.1468,
+      "call rate": 0.288,
+      "recall": 0.7022,
+      "precision": 0.3581,
+      "AP": 0.5031,
+      "mean p_hat": 0.1451
+    },
+    {
+      "variable": "contact",
+      "level": "telephone",
+      "n": 2999,
+      "prevalence": 0.053,
+      "call rate": 0.0674,
+      "recall": 0.4214,
+      "precision": 0.3317,
+      "AP": 0.3357,
+      "mean p_hat": 0.0554
+    },
+    {
+      "variable": "previous outcome",
+      "level": "failure",
+      "n": 866,
+      "prevalence": 0.1455,
+      "call rate": 0.3418,
+      "recall": 0.7381,
+      "precision": 0.3142,
+      "AP": 0.3887,
+      "mean p_hat": 0.1495
+    },
+    {
+      "variable": "previous outcome",
+      "level": "nonexistent",
+      "n": 7097,
+      "prevalence": 0.0883,
+      "call rate": 0.1608,
+      "recall": 0.5407,
+      "precision": 0.2971,
+      "AP": 0.3497,
+      "mean p_hat": 0.087
+    },
+    {
+      "variable": "previous outcome",
+      "level": "success",
+      "n": 273,
+      "prevalence": 0.641,
+      "call rate": 1.0,
+      "recall": 1.0,
+      "precision": 0.641,
+      "AP": 0.7995,
+      "mean p_hat": 0.6558
+    },
+    {
+      "variable": "education",
+      "level": "basic.4y",
+      "n": 839,
+      "prevalence": 0.1001,
+      "call rate": 0.1359,
+      "recall": 0.6786,
+      "precision": 0.5,
+      "AP": 0.6171,
+      "mean p_hat": 0.0938
+    },
+    {
+      "variable": "education",
+      "level": "basic.6y",
+      "n": 431,
+      "prevalence": 0.0928,
+      "call rate": 0.0951,
+      "recall": 0.45,
+      "precision": 0.439,
+      "AP": 0.4912,
+      "mean p_hat": 0.0808
+    },
+    {
+      "variable": "education",
+      "level": "basic.9y",
+      "n": 1186,
+      "prevalence": 0.0818,
+      "call rate": 0.1223,
+      "recall": 0.433,
+      "precision": 0.2897,
+      "AP": 0.2997,
+      "mean p_hat": 0.0771
+    },
+    {
+      "variable": "education",
+      "level": "high.school",
+      "n": 1938,
+      "prevalence": 0.1099,
+      "call rate": 0.1997,
+      "recall": 0.6009,
+      "precision": 0.3307,
+      "AP": 0.4307,
+      "mean p_hat": 0.1064
+    },
+    {
+      "variable": "education",
+      "level": "illiterate",
+      "n": 1,
+      "prevalence": 0.0,
+      "call rate": 0.0,
+      "recall": NaN,
+      "precision": NaN,
+      "AP": NaN,
+      "mean p_hat": 0.0292
+    },
+    {
+      "variable": "education",
+      "level": "professional.course",
+      "n": 1033,
+      "prevalence": 0.1084,
+      "call rate": 0.2207,
+      "recall": 0.7054,
+      "precision": 0.3465,
+      "AP": 0.5159,
+      "mean p_hat": 0.1147
+    },
+    {
+      "variable": "education",
+      "level": "university.degree",
+      "n": 2478,
+      "prevalence": 0.1303,
+      "call rate": 0.2805,
+      "recall": 0.7307,
+      "precision": 0.3396,
+      "AP": 0.4823,
+      "mean p_hat": 0.139
+    },
+    {
+      "variable": "education",
+      "level": "unknown",
+      "n": 330,
+      "prevalence": 0.1788,
+      "call rate": 0.303,
+      "recall": 0.7966,
+      "precision": 0.47,
+      "AP": 0.6375,
+      "mean p_hat": 0.1578
+    },
+    {
+      "variable": "job",
+      "level": "admin.",
+      "n": 2156,
+      "prevalence": 0.1313,
+      "call rate": 0.2709,
+      "recall": 0.7491,
+      "precision": 0.363,
+      "AP": 0.5169,
+      "mean p_hat": 0.134
+    },
+    {
+      "variable": "job",
+      "level": "blue-collar",
+      "n": 1809,
+      "prevalence": 0.0774,
+      "call rate": 0.0824,
+      "recall": 0.3786,
+      "precision": 0.3557,
+      "AP": 0.3091,
+      "mean p_hat": 0.0658
+    },
+    {
+      "variable": "job",
+      "level": "entrepreneur",
+      "n": 254,
+      "prevalence": 0.0906,
+      "call rate": 0.1142,
+      "recall": 0.3478,
+      "precision": 0.2759,
+      "AP": 0.3326,
+      "mean p_hat": 0.0784
+    },
+    {
+      "variable": "job",
+      "level": "housemaid",
+      "n": 197,
+      "prevalence": 0.1015,
+      "call rate": 0.1472,
+      "recall": 0.65,
+      "precision": 0.4483,
+      "AP": 0.6441,
+      "mean p_hat": 0.0982
+    },
+    {
+      "variable": "job",
+      "level": "management",
+      "n": 578,
+      "prevalence": 0.1211,
+      "call rate": 0.2249,
+      "recall": 0.6857,
+      "precision": 0.3692,
+      "AP": 0.5042,
+      "mean p_hat": 0.1136
+    },
+    {
+      "variable": "job",
+      "level": "retired",
+      "n": 353,
+      "prevalence": 0.2805,
+      "call rate": 0.5354,
+      "recall": 0.8889,
+      "precision": 0.4656,
+      "AP": 0.7424,
+      "mean p_hat": 0.2607
+    },
+    {
+      "variable": "job",
+      "level": "self-employed",
+      "n": 291,
+      "prevalence": 0.0859,
+      "call rate": 0.2062,
+      "recall": 0.64,
+      "precision": 0.2667,
+      "AP": 0.3338,
+      "mean p_hat": 0.0956
+    },
+    {
+      "variable": "job",
+      "level": "services",
+      "n": 798,
+      "prevalence": 0.0702,
+      "call rate": 0.099,
+      "recall": 0.3214,
+      "precision": 0.2278,
+      "AP": 0.3351,
+      "mean p_hat": 0.0747
+    },
+    {
+      "variable": "job",
+      "level": "student",
+      "n": 183,
+      "prevalence": 0.2896,
+      "call rate": 0.7213,
+      "recall": 0.9245,
+      "precision": 0.3712,
+      "AP": 0.6341,
+      "mean p_hat": 0.2912
+    },
+    {
+      "variable": "job",
+      "level": "technician",
+      "n": 1341,
+      "prevalence": 0.0925,
+      "call rate": 0.1946,
+      "recall": 0.5968,
+      "precision": 0.2835,
+      "AP": 0.3439,
+      "mean p_hat": 0.1066
+    },
+    {
+      "variable": "job",
+      "level": "unemployed",
+      "n": 211,
+      "prevalence": 0.1517,
+      "call rate": 0.2654,
+      "recall": 0.8125,
+      "precision": 0.4643,
+      "AP": 0.6545,
+      "mean p_hat": 0.1492
+    },
+    {
+      "variable": "job",
+      "level": "unknown",
+      "n": 65,
+      "prevalence": 0.0462,
+      "call rate": 0.1846,
+      "recall": 0.6667,
+      "precision": 0.1667,
+      "AP": NaN,
+      "mean p_hat": 0.0918
+    },
+    {
+      "variable": "default status",
+      "level": "no",
+      "n": 6459,
+      "prevalence": 0.131,
+      "call rate": 0.2545,
+      "recall": 0.7021,
+      "precision": 0.3613,
+      "AP": 0.5026,
+      "mean p_hat": 0.1289
+    },
+    {
+      "variable": "default status",
+      "level": "unknown",
+      "n": 1777,
+      "prevalence": 0.0461,
+      "call rate": 0.0371,
+      "recall": 0.1585,
+      "precision": 0.197,
+      "AP": 0.1672,
+      "mean p_hat": 0.0525
+    }
+  ],
+  "error_patterns": {
+    "by_month": {
+      "mar": {
+        "n": 107.0,
+        "prevalence": 0.5234,
+        "call rate": 1.0,
+        "recall": 1.0,
+        "precision": 0.5234,
+        "AP": 0.6607,
+        "mean p_hat": 0.5033
+      },
+      "apr": {
+        "n": 504.0,
+        "prevalence": 0.1984,
+        "call rate": 0.6726,
+        "recall": 0.88,
+        "precision": 0.2596,
+        "AP": 0.5205,
+        "mean p_hat": 0.21
+      },
+      "may": {
+        "n": 2730.0,
+        "prevalence": 0.0674,
+        "call rate": 0.1348,
+        "recall": 0.4511,
+        "precision": 0.2255,
+        "AP": 0.3081,
+        "mean p_hat": 0.0638
+      },
+      "jun": {
+        "n": 1069.0,
+        "prevalence": 0.101,
+        "call rate": 0.1787,
+        "recall": 0.7037,
+        "precision": 0.3979,
+        "AP": 0.4303,
+        "mean p_hat": 0.1028
+      },
+      "jul": {
+        "n": 1428.0,
+        "prevalence": 0.084,
+        "call rate": 0.0707,
+        "recall": 0.35,
+        "precision": 0.4158,
+        "AP": 0.3334,
+        "mean p_hat": 0.0913
+      },
+      "aug": {
+        "n": 1277.0,
+        "prevalence": 0.0948,
+        "call rate": 0.148,
+        "recall": 0.5785,
+        "precision": 0.3704,
+        "AP": 0.431,
+        "mean p_hat": 0.1042
+      },
+      "sep": {
+        "n": 116.0,
+        "prevalence": 0.5086,
+        "call rate": 1.0,
+        "recall": 1.0,
+        "precision": 0.5086,
+        "AP": 0.7917,
+        "mean p_hat": 0.4522
+      },
+      "oct": {
+        "n": 153.0,
+        "prevalence": 0.4379,
+        "call rate": 1.0,
+        "recall": 1.0,
+        "precision": 0.4379,
+        "AP": 0.6418,
+        "mean p_hat": 0.449
+      },
+      "nov": {
+        "n": 816.0,
+        "prevalence": 0.1152,
+        "call rate": 0.1397,
+        "recall": 0.5106,
+        "precision": 0.4211,
+        "AP": 0.433,
+        "mean p_hat": 0.0993
+      },
+      "dec": {
+        "n": 36.0,
+        "prevalence": 0.5278,
+        "call rate": 0.8889,
+        "recall": 0.9474,
+        "precision": 0.5625,
+        "AP": NaN,
+        "mean p_hat": 0.4642
+      }
+    },
+    "by_poutcome": {
+      "failure": {
+        "n": 866.0,
+        "prevalence": 0.1455,
+        "call rate": 0.3418,
+        "recall": 0.7381,
+        "precision": 0.3142,
+        "AP": 0.3887,
+        "mean p_hat": 0.1495
+      },
+      "nonexistent": {
+        "n": 7097.0,
+        "prevalence": 0.0883,
+        "call rate": 0.1608,
+        "recall": 0.5407,
+        "precision": 0.2971,
+        "AP": 0.3497,
+        "mean p_hat": 0.087
+      },
+      "success": {
+        "n": 273.0,
+        "prevalence": 0.641,
+        "call rate": 1.0,
+        "recall": 1.0,
+        "precision": 0.641,
+        "AP": 0.7995,
+        "mean p_hat": 0.6558
+      }
+    }
+  },
+  "final_rule": {
+    "model": "Gradient boosting (calibrated)",
+    "threshold": 0.1,
+    "calls": 1710.0,
+    "call rate": 0.20762506070908207,
+    "TP": 607.0,
+    "FP": 1103.0,
+    "FN": 321.0,
+    "TN": 6205.0,
+    "precision": 0.3549707602339181,
+    "recall": 0.6540948275862069,
+    "spend per 1000": 1038.1253035454104,
+    "subscriptions per 1000": 73.70082564351627,
+    "net value per 1000": 2646.915978630403,
+    "misclassification cost per 1000": 2423.5065565808645
+  },
+  "temporal": {
+    "train_pos_rate": 0.06375227686703097,
+    "test_pos_rate": 0.3082807187955318,
+    "test_nr_employed_unseen_share": 0.6024769305488101,
+    "test_euribor_unseen_share": 0.9851869839728024,
+    "cost": {
+      "call everyone": 10414.035939776591,
+      "Gradient boosting calibrated at t*": {
+        "threshold": 0.1,
+        "calls": 2269.0,
+        "call rate": 0.27549781447304517,
+        "TP": 1225.0,
+        "FP": 1044.0,
+        "FN": 1314.0,
+        "TN": 4653.0,
+        "precision": 0.5398854120758043,
+        "recall": 0.4824734147302087,
+        "spend per 1000": 1377.4890723652259,
+        "subscriptions per 1000": 148.73725109276347,
+        "net value per 1000": 6059.373482272948,
+        "misclassification cost per 1000": 7813.2588635259835
+      },
+      "Gradient boosting raw at t*": {
+        "threshold": 0.1,
+        "calls": 2403.0,
+        "call rate": 0.29176784847013115,
+        "TP": 1272.0,
+        "FP": 1131.0,
+        "FN": 1267.0,
+        "TN": 4566.0,
+        "precision": 0.529338327091136,
+        "recall": 0.5009846396218984,
+        "spend per 1000": 1458.8392423506557,
+        "subscriptions per 1000": 154.4439048081593,
+        "net value per 1000": 6263.355998057309,
+        "misclassification cost per 1000": 7609.276347741622
+      }
+    }
+  },
+  "class_weight_cost": {
+    "Logistic regression": {
+      "weighted raw at t*": {
+        "threshold": 0.1,
+        "calls": 8227.0,
+        "call rate": 0.9989072365225837,
+        "TP": 928.0,
+        "FP": 7299.0,
+        "FN": 0.0,
+        "TN": 9.0,
+        "precision": 0.11279931931445242,
+        "recall": 1.0,
+        "spend per 1000": 4994.536182612919,
+        "subscriptions per 1000": 112.67605633802818,
+        "net value per 1000": 639.2666342884895,
+        "misclassification cost per 1000": 4431.155900922778
+      },
+      "weighted raw at 0.5": {
+        "threshold": 0.5,
+        "calls": 1628.0,
+        "call rate": 0.19766877124817872,
+        "TP": 578.0,
+        "FP": 1050.0,
+        "FN": 350.0,
+        "TN": 6258.0,
+        "precision": 0.35503685503685506,
+        "recall": 0.6228448275862069,
+        "spend per 1000": 988.3438562408936,
+        "subscriptions per 1000": 70.17969888295289,
+        "net value per 1000": 2520.6410879067507,
+        "misclassification cost per 1000": 2549.781447304517
+      },
+      "unweighted raw at 0.5": {
+        "threshold": 0.5,
+        "calls": 314.0,
+        "call rate": 0.0381253035454104,
+        "TP": 207.0,
+        "FP": 107.0,
+        "FN": 721.0,
+        "TN": 7201.0,
+        "precision": 0.6592356687898089,
+        "recall": 0.22306034482758622,
+        "spend per 1000": 190.62651772705198,
+        "subscriptions per 1000": 25.133559980573093,
+        "net value per 1000": 1066.0514813016027,
+        "misclassification cost per 1000": 4004.371053909665
+      }
+    },
+    "Gradient boosting": {
+      "weighted raw at t*": {
+        "threshold": 0.1,
+        "calls": 8172.0,
+        "call rate": 0.9922292374939291,
+        "TP": 927.0,
+        "FP": 7245.0,
+        "FN": 1.0,
+        "TN": 63.0,
+        "precision": 0.11343612334801761,
+        "recall": 0.9989224137931034,
+        "spend per 1000": 4961.146187469645,
+        "subscriptions per 1000": 112.55463817387081,
+        "net value per 1000": 666.5857212238951,
+        "misclassification cost per 1000": 4403.836813987373
+      },
+      "weighted raw at 0.5": {
+        "threshold": 0.5,
+        "calls": 1574.0,
+        "call rate": 0.1911121903836814,
+        "TP": 588.0,
+        "FP": 986.0,
+        "FN": 340.0,
+        "TN": 6322.0,
+        "precision": 0.3735705209656925,
+        "recall": 0.6336206896551724,
+        "spend per 1000": 955.560951918407,
+        "subscriptions per 1000": 71.39388052452647,
+        "net value per 1000": 2614.1330743079166,
+        "misclassification cost per 1000": 2456.289460903351
+      },
+      "unweighted raw at 0.5": {
+        "threshold": 0.5,
+        "calls": 361.0,
+        "call rate": 0.043831957260806215,
+        "TP": 239.0,
+        "FP": 122.0,
+        "FN": 689.0,
+        "TN": 7186.0,
+        "precision": 0.6620498614958449,
+        "recall": 0.25754310344827586,
+        "spend per 1000": 219.1597863040311,
+        "subscriptions per 1000": 29.018941233608547,
+        "net value per 1000": 1231.7872753763963,
+        "misclassification cost per 1000": 3838.6352598348712
+      }
+    }
+  },
+  "sensitivity": [
+    {
+      "experiment": "leakage: with duration",
+      "model": "Logistic regression",
+      "AP": 0.5948,
+      "ROC-AUC": 0.9345,
+      "Brier": 0.0637,
+      "ECE": 0.0314
+    },
+    {
+      "experiment": "main: without duration",
+      "model": "Logistic regression",
+      "AP": 0.4494,
+      "ROC-AUC": 0.7963,
+      "Brier": 0.0786,
+      "ECE": 0.0083
+    },
+    {
+      "experiment": "leakage: with duration",
+      "model": "Gradient boosting",
+      "AP": 0.6667,
+      "ROC-AUC": 0.9496,
+      "Brier": 0.0555,
+      "ECE": 0.0085
+    },
+    {
+      "experiment": "main: without duration",
+      "model": "Gradient boosting",
+      "AP": 0.4808,
+      "ROC-AUC": 0.8105,
+      "Brier": 0.0763,
+      "ECE": 0.0049
+    },
+    {
+      "experiment": "temporal split (last 20% as test)",
+      "model": "Logistic regression",
+      "AP": 0.5259,
+      "ROC-AUC": 0.7479,
+      "Brier": 0.1912,
+      "ECE": 0.0967
+    },
+    {
+      "experiment": "temporal split (last 20% as test)",
+      "model": "Gradient boosting",
+      "AP": 0.4817,
+      "ROC-AUC": 0.6756,
+      "Brier": 0.2322,
+      "ECE": 0.1905
+    },
+    {
+      "experiment": "temporal split, calibrated",
+      "model": "Gradient boosting",
+      "AP": 0.4818,
+      "ROC-AUC": 0.6646,
+      "Brier": 0.2342,
+      "ECE": 0.1902
+    },
+    {
+      "experiment": "class_weight = balanced",
+      "model": "Logistic regression",
+      "AP": 0.4442,
+      "ROC-AUC": 0.7974,
+      "Brier": 0.1625,
+      "ECE": 0.2751
+    },
+    {
+      "experiment": "class_weight = balanced",
+      "model": "Gradient boosting",
+      "AP": 0.4761,
+      "ROC-AUC": 0.8106,
+      "Brier": 0.1547,
+      "ECE": 0.2663
+    }
+  ],
+  "runtime_minutes": 5.9
+}
