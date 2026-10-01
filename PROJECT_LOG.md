@@ -22,7 +22,7 @@ Roles may overlap; every member must have a documented technical contribution.
 
 ## Shared workspace
 
-* Code and report: [EDIT: link to the shared GitHub/GitLab repository or shared folder that preserves history]
+* Code and report: private GitHub repository <https://github.com/ogskeltal/csi5810midtermgroupproject> (owner: Andrew Aurand; add the other members and, if required, the instructor as collaborators)
 * Report source: Overleaf project [EDIT: link], built from `paper/overleaf_group3_bank_marketing.zip`.
 
 ## Meeting record

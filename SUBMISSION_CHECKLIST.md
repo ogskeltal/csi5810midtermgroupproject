@@ -16,7 +16,7 @@ Table IX temporal cost view; Table X data dictionary; Table XI subgroup table.
 | Reproducible notebook with setup instructions, data paths, seeds, separated stages, generated tables/figures | `code/bank_marketing_midterm.ipynb` (executed, 44 cells, no errors), `code/README.md`, `code/requirements.txt`, `code/outputs/` | done |
 | Contribution statement | Paper, "Contribution Statement" (red note to remove); `PROJECT_LOG.md` | **template — group must confirm roles** |
 | Project log / meeting record | `PROJECT_LOG.md` | **template — group must fill dates/decisions** |
-| Link/archive of shared workspace | `PROJECT_LOG.md` (placeholder) | **group must add link** |
+| Link/archive of shared workspace | private GitHub repository `ogskeltal/csi5810midtermgroupproject` (add the link to `PROJECT_LOG.md` and give the instructor access if required) | done |
 | Generative-AI disclosure | Paper, "Generative-AI Disclosure"; NB §14; `code/README.md`; `PROJECT_LOG.md` | done |
 | Group presentation / narrated walkthrough (final checklist item) | not produced | **group must record** |
 
@@ -115,8 +115,8 @@ Table IX temporal cost view; Table X data dictionary; Table XI subgroup table.
 the guideline items above (section presence, every figure/table referenced in the text, citations resolving to the
 bib file, page budget, required analyses, notebook execution without errors, paper tables byte-identical to notebook
 outputs, headline numbers in the text matching `results.json`). The full output is in `VERIFICATION_REPORT.txt`.
-Every check passes except "version control / shared workspace with history": the project folder is not a git
-repository (`git init` plus a commit by the group satisfies that guideline). `code/scan_writing.py` checks the paper
+Every check passes. The project is version-controlled in the private GitHub repository
+`ogskeltal/csi5810midtermgroupproject` (the group-assignment PDF is excluded via `.gitignore`). `code/scan_writing.py` checks the paper
 source for em dashes and machine-sounding phrasing; the paper contains none (remaining matches are the title's
 question, the research question itself, and LaTeX float specifiers).
 

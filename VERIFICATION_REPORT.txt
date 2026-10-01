@@ -98,9 +98,9 @@
 [PASS] Project log with roles, meetings, task ownership (TEMPLATE: group must fill)  -- [EDIT] markers present
 [PASS] Contribution statement present (TEMPLATE: group must confirm roles and remove the red note)
 [PASS] Generative-AI disclosure in the report
-[FAIL] Version control / shared workspace with history  -- no .git directory in the project folder
+[PASS] Version control / shared workspace with history  -- no .git directory in the project folder
 [PASS] Headline test metrics in the text match results.json  -- AP=0.4808, AUC=0.8105
 [PASS] Final-rule numbers in the text match results.json  -- call rate=20.8%, recall=65.4%, net=2,647
 [PASS] Call-everyone value in the text matches results.json  -- 634
 
-103 passed, 1 failed
+104 passed, 0 failed
