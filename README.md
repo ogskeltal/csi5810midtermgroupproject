@@ -8,7 +8,5 @@ Group 3: Andrew Aurand (G), Christina Carvalho (U), Cameron Clark (U), Tyler Don
 | `code/` | Executed Jupyter notebook (`bank_marketing_midterm.ipynb`), setup instructions (`README.md`, `requirements.txt`), generated outputs (`outputs/figures`, `outputs/tables`, `outputs/results.json`), and the checker scripts used for the submission audit. |
 | `paper/` | IEEE conference report: `main.tex`, `references.bib`, `figures/`, `tables/`, compiled `main.pdf`, and `overleaf_group3_bank_marketing.zip` (upload to Overleaf as a new project, compiler pdfLaTeX). |
 | `dataset/` | UCI Bank Marketing data (dataset 222, CC BY 4.0) as downloaded; the notebook reads `dataset/bank-additional/bank-additional-full.csv`. |
-| `PROJECT_LOG.md` | Roles, meeting record and task ownership (to be completed by the group). |
-| `SUBMISSION_CHECKLIST.md` | Map from every guideline requirement to where it is satisfied, plus the verification notes. |
 | `VERIFICATION_REPORT.txt` | Output of `code/verify_requirements.py` for the submitted state.
 
