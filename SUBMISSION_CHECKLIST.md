@@ -127,11 +127,3 @@ specific claim or method (dataset provenance, leakage, the four learners, AP for
 ECE, bootstrap intervals, calibration and isotonic regression, the Bayes cost threshold, permutation importance,
 partial dependence, dataset shift). The LightGBM paper is cited without page numbers because the official NeurIPS
 proceedings are unpaginated and secondary sources disagree.
-
-## Items the group must complete before submission
-
-1. Confirm or replace the role split in the paper's Contribution Statement (remove the red note) and fill `PROJECT_LOG.md` (dates, decisions, owners, workspace link).
-2. Add the other members' e-mail addresses to the author block if the instructor expects them.
-3. Record the group presentation / narrated walkthrough.
-4. Upload `paper/overleaf_group3_bank_marketing.zip` to Overleaf (New Project → Upload Project, compiler pdfLaTeX) and recompile, or submit `paper/main.pdf` directly.
-5. Confirm the project-selection e-mail to the instructor was sent with all members CC'ed.
