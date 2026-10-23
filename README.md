@@ -10,8 +10,5 @@ Group 3: Andrew Aurand (G), Christina Carvalho (U), Cameron Clark (U), Tyler Don
 | `dataset/` | UCI Bank Marketing data (dataset 222, CC BY 4.0) as downloaded; the notebook reads `dataset/bank-additional/bank-additional-full.csv`. |
 | `PROJECT_LOG.md` | Roles, meeting record and task ownership (to be completed by the group). |
 | `SUBMISSION_CHECKLIST.md` | Map from every guideline requirement to where it is satisfied, plus the verification notes. |
-| `VERIFICATION_REPORT.txt` | Output of `code/verify_requirements.py` for the submitted state. |
-| `CSI_5810_Midterm_Project_Guidelines.pdf` | Course guidelines the submission follows. |
+| `VERIFICATION_REPORT.txt` | Output of `code/verify_requirements.py` for the submitted state.
 
-To reproduce everything: follow `code/README.md` (about five minutes), then compile `paper/main.tex` with pdfLaTeX + BibTeX
-or upload the Overleaf zip.
